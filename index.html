@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet" />
+    <title>Despachante 4 de Abril</title>
+</head>
+
+<body class="Main">
+
+    <div class="container header">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <span class="fs-3 main-title">Despachante 4 de Abril</span>
+            </a>
+        </header>
+    </div>
+
+    <div class="container">
+        <nav class="navbar navbar-expand navbar-light ">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
+                                data-bs-target=".modal-servico" href="#">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
+                                data-bs-target=".modal-contato" href="#">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active .btn-sobre-nos" aria-current="page" data-bs-toggle="modal"
+                                data-bs-target=".modal-sobre-nos" href="#">Sobre nos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <img class="d-block w-50" src="images/fachada-desp.jpeg" alt="First slide">
+    </div>
+    <br />
+    <div class="container">
+        <span class="fs-4">Peça um orçamento sem compromisso</span>
+    </div>
+    <br />
+    <div class="container">
+        <form class="row g-3" action="http://localhost:8080/api" method="POST">
+            <div class="col-md-6">
+                <label for="inputName4" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="inputName4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmpresa4" class="form-label">Empresa</label>
+                <input type="text" class="form-control" id="inputEmpresa4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPhone1" class="form-label">Celular</label>
+                <input type="tel" class="form-control" id="inputPhone1">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Rua da Silva, 25">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Endereço 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartmento, Casa">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Estado</label>
+                <select id="inputState" class="form-select" name="estado">
+                    <option selected>Selecione...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-md-8">
+                <label for="inputDetalhes" class="form-label">Detalhes</label>
+                <textarea class="form-control" name="inputDetalhes" id="inputDetalhes" rows="10" cols="30"></textarea>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Incluir fotos de documentos.
+                    </label>
+                </div>
+                <div>
+                    <label for="formFileMultiple" class="form-label">Upload de documentos</label>
+                    <input class="form-control" type="file" name="formFileMultiple" id="formFileMultiple" multiple />
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <br />
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Serviços</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contato</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre nos</a></li>
+            </ul>
+            <p class="text-center text-muted">© 2021 Despachante 4 de Abril, LTDA</p>
+        </footer>
+    </div>
+    <br />
+    <div class="modal fade modal-sobre-nos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Sobre Nos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Somos uma empresa familiar atuando ha mais de 15 anos na regiao.
+                </div>
+                <div class="modal-footer">
+                    <a class="nav-link" href="#">
+                        <img src="images/facebook.svg" alt="" width="30" height="24">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <div class="modal fade modal-servico" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Serviços</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">Primeiro Emplacamento</li>
+                      <li class="list-group-item">Transferência de Veículos</li>
+                      <li class="list-group-item">Licenciamentos</li>
+                      <li class="list-group-item">Renovação de CNH</li>
+                      <li class="list-group-item">Entre outros</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-contato" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Contato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Endereço:</p>
+                    <a href="https://goo.gl/maps/2prQ2cjZihBq1UJR9" target="_blank">
+                        <p>R. Bandeirantes, 267 <br />
+                            Centro, Marília - SP<br />
+                            17501-090</p>
+                    </a>
+                    Alem de requisitar orcamentos e duvidas pelo nosso site, voce pode nos contatar pelo telefone,
+                    email
+                    ou pelas redes socials:</p>
+                    <br />
+                    <div class="text-center">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.5349992141096!2d-49.945504299999996!3d-22.2197712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bfd737c229eea9%3A0x9ad32d1cbce27189!2sDespachante%204%20de%20Abril!5e0!3m2!1sen!2suk!4v1642284237941!5m2!1sen!2suk"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <a class="nav-link" href="#">
+                        <img src="images/telephone.svg" alt="" width="30" height="24">
+                        (14) 9999-999999
+                    </a>
+                    <a class="nav-link" href="#">
+                        <img src="images/whatsapp.svg" alt="" width="30" height="24">
+                    </a>
+                    <a class="nav-link" href="https://www.facebook.com/people/Quatro-de-Abril-Despachos-Policiais/100063789691915/?paipv=0&eav=AfaDT0ilhnBeOS6CsjYU7dgpk7_T9lbgePDU8U6_Ywk0y7RlEjlezYSSiBhyCIjKUSo&_rdr">
+                        <img src="images/facebook.svg" alt="" width="30" height="24">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="main.js" />
+</body>
+
+</html>
