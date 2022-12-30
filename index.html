@@ -57,22 +57,22 @@
     </div>
     <br />
     <div class="container">
-        <form class="row g-3" action="http://localhost:8080/api" method="POST">
+        <form name="frm-email" id="frm-sub" class="row g-3" action="http://localhost:8080/api" method="POST">
             <div class="col-md-6">
-                <label for="inputName4" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="inputName4">
+                <label for="inputName" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="inputName">
             </div>
             <div class="col-md-6">
-                <label for="inputEmpresa4" class="form-label">Empresa</label>
-                <input type="text" class="form-control" id="inputEmpresa4">
+                <label for="inputEmpresa" class="form-label">Empresa</label>
+                <input type="text" class="form-control" id="inputEmpresa">
             </div>
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail">
             </div>
             <div class="col-md-6">
-                <label for="inputPhone1" class="form-label">Celular</label>
-                <input type="tel" class="form-control" id="inputPhone1">
+                <label for="inputPhone" class="form-label">Celular</label>
+                <input type="tel" class="form-control" id="inputPhone">
             </div>
             <div class="col-12">
                 <label for="inputAddress" class="form-label">Endereço</label>
@@ -136,12 +136,12 @@
                     </label>
                 </div>
                 <div>
-                    <label for="formFileMultiple" class="form-label">Upload de documentos</label>
-                    <input class="form-control" type="file" name="formFileMultiple" id="formFileMultiple" multiple />
+                    <label for="fileMultiple" class="form-label">Upload de documentos</label>
+                    <input class="form-control" type="file" name="fileMultiple" id="fileMultiple" multiple />
                 </div>
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button id="submit-button" type="button" class="btn btn-primary">Enviar</button>
             </div>
         </form>
     </div>
