@@ -6,6 +6,16 @@
     submitButton.addEventListener("click", submitForm);
 
     function submitForm() {
+        let form = document.querySelector("#frm-sub");
+        if (formValidator(form)) {
+            form.scrollIntoView()
+            return;
+        }
+
+        if (checkFileSize()) {
+            return;
+        }
+
         let object = {};
         let formData = document.querySelector("#frm-sub")
         let inputName = formData.querySelector("#inputName");
@@ -65,4 +75,35 @@
             })
 
     }
+
+    function formValidator(form) {
+        let isNotValid = Array.from(form.querySelectorAll("input[required]")).some(n => n.value == '')
+        if (isNotValid) {
+            form.classList.add('was-validated');
+            return true
+        } else {
+            form.classList.remove('was-validated');
+            return false
+        }
+    }
+
+    function checkFileSize() {
+        let fileMultiple = document.querySelector("#fileMultiple");
+        if (typeof (fileMultiple.files) != "undefined") {
+
+            let filesSize = Array.from(fileMultiple.files)
+                .map(file => file.size)
+                .reduce((acc, fileSize) => acc + (fileSize / 1024 / 1024),0)
+
+            if (filesSize >= 10) {
+                alert("A soma dos arquivos nao pode ultrapassar 10MB")
+                return true
+            }
+            return false;
+        } else {
+            alert("This browser does not support HTML5.")
+            return true
+        }
+    }
+
 })();

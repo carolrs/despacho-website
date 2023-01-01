@@ -60,7 +60,10 @@
         <form name="frm-email" id="frm-sub" class="row g-3" action="http://localhost:8080/api" method="POST">
             <div class="col-md-6">
                 <label for="inputName" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="inputName">
+                <input type="text" class="form-control" id="inputName" required>
+                <div class="invalid-feedback">
+                    Nome é obrigatório.
+                </div>
             </div>
             <div class="col-md-6">
                 <label for="inputEmpresa" class="form-label">Empresa</label>
@@ -68,7 +71,10 @@
             </div>
             <div class="col-md-6">
                 <label for="inputEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail">
+                <input type="email" class="form-control" id="inputEmail" required>
+                <div class="invalid-feedback">
+                    E-mail é obrigatório.
+                </div>
             </div>
             <div class="col-md-6">
                 <label for="inputPhone" class="form-label">Celular</label>
@@ -127,14 +133,11 @@
             <div class="col-md-8">
                 <label for="inputDetalhes" class="form-label">Detalhes</label>
                 <textarea class="form-control" name="inputDetalhes" id="inputDetalhes" rows="10" cols="30"></textarea>
+                <div class="invalid-feedback">
+                    O campo Detalhes é obrigatório.
+                </div>
             </div>
             <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Incluir fotos de documentos.
-                    </label>
-                </div>
                 <div>
                     <label for="fileMultiple" class="form-label">Upload de documentos</label>
                     <input class="form-control" type="file" name="fileMultiple" id="fileMultiple" multiple />
