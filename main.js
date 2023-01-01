@@ -5,7 +5,6 @@
 
     submitButton.addEventListener("click", submitForm);
 
-
     function submitForm() {
         let object = {};
         let formData = document.querySelector("#frm-sub")
@@ -31,19 +30,21 @@
         object[inputState.id] = inputState.value;
         object[inputZip.id] = inputZip.value;
         object[inputDetalhes.id] = inputDetalhes.value;
-        //object[fileMultiple.id] = fileMultiple.value;
-
 
         const data = new FormData()
         data.append('data', JSON.stringify(object))
-        data.append('files', fileMultiple.files)
+
+       const fileArray = Array.from(fileMultiple.files)
+
+       fileArray.forEach(file => data.append('files', file, file.name))
 
         let json = object;
 
         let dataReceived;
 
-        fetch("http://localhost:8080", {
+        fetch("https://despachante-mailer.onrender.com", {
             method: "post",
+            mode: 'cors',
             body: data
         })
             .then(resp => {
@@ -56,17 +57,12 @@
             })
             .then(dataJson => {
                 dataReceived = JSON.parse(dataJson)
+                console.log(`Received: ${dataReceived}`)
             })
             .catch(err => {
                 if (err === "server") return
                 console.log(err)
             })
 
-        console.log(`Received: ${dataReceived}`)
-
     }
-
-
-
-
 })();
