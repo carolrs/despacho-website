@@ -7,3 +7,8 @@
     color: white;
 }
 
+.lista-docs {
+    background-image: linear-gradient(to left, royalblue , white);
+    font-size: 25px
+}
+
