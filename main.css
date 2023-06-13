@@ -1,14 +1,98 @@
-.header {
-    background-image: linear-gradient(to right, royalblue , white);
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #fafafa;
 }
 
-.main-title {
+.Main {
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container.header {
+    height: 200px;
+    width: 200vw;
+}
+
+
+.container.header .main-title {
+    color: #721c24;
+}
+
+.navbar {
+    background-color: #e9ecef;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-link {
+    color: #333;
+}
+
+.navbar .nav-link.active {
     font-weight: bold;
-    color: white;
+    color: #007bff;
 }
 
-.lista-docs {
-    background-image: linear-gradient(to left, royalblue , white);
-    font-size: 25px
+footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    text-align: center;
+    padding: 20px 0;
 }
 
+footer a {
+    color: #6c757d;
+}
+
+footer a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.modal-content {
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.modal-content .modal-body {
+    padding: 20px;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.font-bold{
+    font-weight: bold;
+}
